@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deporte Rey - Fútbol</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ffd700;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        section {
+            margin-bottom: 50px;
+        }
+        
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #1e3c72;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+        }
+        
+        section p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #555;
+        }
+        
+        .positions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .position-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .position-card h3 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .position-card p {
+            margin: 0;
+            color: #666;
+        }
+        
+        .rules {
+            background: #f0f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .rules ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .rules li {
+            padding: 15px 0;
+            padding-left: 20px;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+        }
+        
+        .rules li:before {
+            content: "⚽";
+            position: absolute;
+            left: 0;
+            color: #2a5298;
+        }
+        
+        .rules li:last-child {
+            border-bottom: none;
+        }
+        
+        .rules strong {
+            color: #1e3c72;
+        }
+        
+        .legends {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .legend-card {
+            background: white;
+            border: 2px solid #2a5298;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .legend-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .legend-card h3 {
+            color: #2a5298;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+        
+        .legend-country {
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .legend-card p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            margin: 0;
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚽ Deporte Rey</h1>
+        <h2>Fútbol</h2>
+        <p>Once contra once, un balón y noventa minutos para escribir una historia</p>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">211</div>
+                <div class="stat-label">países afiliados a la FIFA</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">90'</div>
+                <div class="stat-label">de partido reglamentario</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">1863</div>
+                <div class="stat-label">año de sus reglas modernas</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section>
+            <h2>Un juego simple, un mundo entero</h2>
+            <p>El fútbol nació de una idea sencilla: mover un balón con los pies hasta la portería rival. Esa simplicidad es su fuerza. No hace falta equipo costoso ni una cancha perfecta; basta un espacio, algo redondo que ruede y dos puntos que hagan de arco.</p>
+            <p>Se juega en más de 200 países bajo el mismo reglamento básico, lo que lo convierte en un idioma común entre culturas que no comparten casi nada más.</p>
+        </section>
+        
+        <section>
+            <h2>Las posiciones en el campo</h2>
+            <div class="positions">
+                <div class="position-card">
+                    <h3>🧤 Portero</h3>
+                    <p>El único que puede usar las manos, y solo dentro de su área. Última barrera antes del gol.</p>
+                </div>
+                <div class="position-card">
+                    <h3>🛡️ Defensas</h3>
+                    <p>Frenan los ataques rivales y organizan la salida del balón desde atrás.</p>
+                </div>
+                <div class="position-card">
+                    <h3>⚙️ Mediocampistas</h3>
+                    <p>El motor del equipo: conectan defensa y ataque, reparten el juego.</p>
+                </div>
+                <div class="position-card">
+                    <h3>⚡ Delanteros</h3>
+                    <p>Su misión principal es definir las jugadas y convertir los goles.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Reglas esenciales</h2>
+            <div class="rules">
+                <ul>
+                    <li><strong>01 Fuera de juego:</strong> Un jugador no puede recibir el balón si está más adelantado que el último defensor rival al momento del pase.</li>
+                    <li><strong>02 Tarjetas:</strong> La amarilla amonesta una falta grave; la roja expulsa al jugador y deja a su equipo con uno menos.</li>
+                    <li><strong>03 Saque de banda y de esquina:</strong> Cuando el balón sale por la línea lateral se reanuda con las manos; si sale por el fondo tras tocar a un defensor, hay córner.</li>
+                    <li><strong>04 Penal:</strong> Una falta dentro del área propia se castiga con un tiro directo desde los 11 metros frente al portero.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Nombres que marcaron la historia</h2>
+            <p>Cada generación tiene sus referentes, jugadores que redefinieron lo que el balón podía hacer.</p>
+            <div class="legends">
+                <div class="legend-card">
+                    <h3>Diego Maradona</h3>
+                    <div class="legend-country">🇦🇷 Argentina</div>
+                    <p>Campeón del mundo en 1986, ídolo eterno del Nápoles y la selección albiceleste.</p>
+                </div>
+                <div class="legend-card">
+                    <h3>Pelé</h3>
+                    <div class="legend-country">🇧🇷 Brasil</div>
+                    <p>Único futbolista en ganar tres Copas del Mundo, símbolo del "jogo bonito".</p>
+                </div>
+                <div class="legend-card">
+                    <h3>Lionel Messi</h3>
+                    <div class="legend-country">🇦🇷 Argentina</div>
+                    <p>Ocho balones de oro y el título mundial que le faltaba, logrado en Qatar 2022.</p>
+                </div>
+                <div class="legend-card">
+                    <h3>Cristiano Ronaldo</h3>
+                    <div class="legend-country">🇵🇹 Portugal</div>
+                    <p>Máximo goleador histórico de selecciones y de la Champions League.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>⚽ Hecho para los que aman el balón, la cancha y los noventa minutos ⚽</p>
+    </footer>
+</body>
+</html>
